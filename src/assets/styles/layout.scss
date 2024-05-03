@@ -1,0 +1,233 @@
+.default-layout {
+  position: relative;
+}
+
+// Navbar style
+.nav-bar {  
+  @media screen and (min-width: 901px) {
+    .desktop-version {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px;
+      box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.01);
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .mobile-version {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px;
+      box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.01);
+    }
+  }
+
+  .left-part, .right-part {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .left-part {
+    .logo {
+      padding-right: 19px;
+      border-right: 0.5px solid #E1E1E1;
+      margin-right: 13px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    p {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 18px;
+      font-family: 'Source Sans Pro', sans-serif;
+      text-transform: uppercase;
+    }
+  }
+
+  .right-part {
+    input {
+      background: #FAFAFA;
+      border: 0.5px solid #F2F2F2;
+      box-sizing: border-box;      
+      border-radius: 5px;
+      padding: 10px 0 10px 17px;
+      margin-right: 25px;
+      min-width: 259px;
+      outline: none;
+
+      &::placeholder {
+        font-family: Source Sans Pro;
+        font-style: italic;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 15px;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .settings {
+      margin-right: 10px;
+    }
+
+    img {
+      cursor: pointer;
+    }
+  }
+}
+
+// Main Content Style
+.content {  
+  @media screen and (min-width: 901px) {
+    display: flex;
+    min-height: 85vh;    
+
+    .children-page {
+      width: calc(100% - 300px);
+      padding: 40px;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .children-page { 
+      padding: 15px;
+    }
+  }
+
+  // Sidebar Style
+  .side-bar {    
+    background: #FAFAFA;
+    width: 220px;
+    padding: 39px 40px 39px 30px;
+
+    .main-title {
+      padding-left: 10px;
+    }
+
+    .divider {
+      margin-left: 10px;
+    }
+
+    &.mobile-version {
+      position: fixed;
+      height: 100vh;
+      z-index: 8;      
+      top: 0;
+      -webkit-animation: slide 0.5s forwards;
+      animation: slide 0.5s forwards;
+      left: -300px;
+
+      @-webkit-keyframes slide {
+          100% { left: 0; }
+      }
+      
+      @keyframes slide {
+          100% { left: 0; }
+      }
+
+      .close-icon {
+        position: absolute;
+        width: 15px;
+        top: 15px;
+        right: 20px;
+      }
+    }
+
+    .link-list {
+      margin-top: 30px;
+
+      li {
+        list-style: none;
+        margin-bottom: 10px;        
+        
+        &:hover {
+          background-color: white;
+          box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.01);
+        }
+
+        a, &.log-out {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          padding: 10px;
+
+          div {
+            width: 16px;
+            margin-right: 15px;
+            display: flex;
+
+            img {
+              width: 100%;
+
+              &.block {
+                display: block;
+              }
+
+              &.none {
+                display: none;
+              }
+            }
+          }          
+
+          span {
+            font-family: Source Sans Pro;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 18px;
+            color: black;          
+          }
+        }
+
+        &.active {
+          a {
+            span {
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .children-page {    
+    background: #FDFDFD;
+  }
+}
+
+// Footer Style
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+
+  &.mobile-version {
+    flex-direction: column;
+  }
+
+  .company {
+    font-family: Source Sans Pro;    
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: black;
+    font-weight: 400;
+  }
+
+  p:not(.company) {
+    font-weight: 300;
+    font-family: Source Sans Pro;    
+    font-size: 14px;
+    line-height: 18px;
+    color: black;
+  }
+}

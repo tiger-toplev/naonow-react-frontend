@@ -1,0 +1,164 @@
+.auth-layout {
+  width: 100%;
+  display: flex;
+  align-items: center;  
+  flex-direction: column;
+  padding-top: 70px;
+
+  .auth-form {
+    margin-top: 60px;
+
+    h4 {
+      font-family: Raleway;      
+      font-weight: bold;
+      font-size: 39px;
+      line-height: 46px;
+      text-transform: uppercase;
+      color: #42413D;
+      text-align: center;
+      margin: 0 0 30px;
+    }
+
+    .form-section {      
+      background: #FFFFFF;
+      box-shadow: 2px 2px 46px rgba(235, 235, 235, 0.5);
+      
+      .name-input {
+        display: flex;
+        width: 100%;
+
+        .form-item {
+          width: 47%;
+          
+          &:first-child {
+            margin-right: 3%;
+          }
+
+          &:nth-child(2) {
+            margin-left: 3%;
+          }
+        }
+      }
+
+      .form-item {        
+        margin-bottom: 20px;
+
+        .form-item-inner {
+          display: flex;
+          flex-direction: column;
+
+          label {
+            font-family: Avenir Next;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 25px;
+            color: #767676;
+          }
+  
+          input:not(.form-control) {
+            border-right: none;
+            border-left: none;
+            border-top: none;
+            border-bottom: 1px solid #979797;
+            outline: none;
+            padding: 5px 0;
+            font-family: Avenir Next;          
+            font-weight: 600;
+            font-size: 20px;          
+            color: #42413D;
+          }
+
+          input.form-control {
+            border-right: none;
+            border-left: none;
+            border-top: none;
+            border-bottom: 1px solid #979797;
+            outline: none;            
+            font-family: Avenir Next;          
+            font-weight: 600;
+            font-size: 20px;          
+            color: #42413D;
+            width: 100%;
+            border-radius: 0;
+          }
+
+          .flag-dropdown {
+            background-color: transparent;
+            border: none;
+            border-radius: 0;
+            border-bottom: 1px solid #979797;
+
+            &.open {
+              border-bottom: 1px solid #979797;
+            }
+          }
+
+          .country-list {
+            margin: 1px 0 0 -1px;
+          }
+        }        
+      }
+
+      .error-msg {
+        color: red;
+        text-align: left;
+        margin-top: 5px;
+      }
+
+      .system-error-msg {
+        color: red;
+        text-align: center;
+        margin-top: 5px;
+      }
+    }
+
+    .submit-action {
+      margin: 30px 0;
+      text-align: center;      
+
+      .auth-button {
+        background: #6A1CEA;
+        font-family: Avenir Next;        
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+        color: #FFFFFF;
+        outline: none;
+        border: none;
+        padding: 11px 70px;
+        cursor: pointer;       
+      }
+    }
+    
+    p {
+      text-align: center;
+      font-family: Avenir Next;      
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 21px;
+      text-align: center;
+      color: #767676;
+
+      a {
+        color: black;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+// Responsive Style
+@media screen and (max-width: 600px) {
+  .form-section {
+    width: 320px;
+    padding: 15px;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .form-section {
+    width: 456px;
+    padding: 22px;    
+  }
+}

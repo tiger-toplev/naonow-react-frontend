@@ -1,0 +1,60 @@
+.main-dashboard {
+  .summary-information {
+    margin-top: 35px;
+    display: grid;    
+    grid-gap: 24px;
+
+    .summary-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 30px;
+      background: #FFFFFF;
+      border: 0.5px solid #F2F2F2;
+      box-sizing: border-box;
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.01);
+      border-radius: 11px;
+
+      p {
+        font-family: Source Sans Pro;        
+        font-weight: 900;
+        font-size: 50px;
+        line-height: 140%;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+
+        img {
+          margin-right: 11px;
+        }
+
+        span {
+          font-family: Source Sans Pro;          
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 130%;
+        }
+      }
+    }
+  }
+
+  .upcoming-appointments, .past-lessons {
+    margin-top: 42px;
+  }
+}
+
+// Responsive Style
+@media screen and (max-width: 600px) {
+  .summary-information {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .summary-information {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
